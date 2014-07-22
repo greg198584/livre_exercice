@@ -1,3 +1,4 @@
+
 /* fonction qui cherche une chaine dans une autre 
  * usage : strstr_perso(str1, str2)
  *
@@ -16,9 +17,10 @@ int count=0;
 
 char *pointeur = NULL;
 
-nombreCaractere = strlen(str2)-1;
+/* probleme par encore resolu avec exercice9 , rajouter -1 apres strlen(str2) */
+nombreCaractere = strlen(str2);
 
-/*printf("\n Le nombre de caractère est : %d", nombreCaractere);*/
+printf("\n Le nombre de caractère est : %d", nombreCaractere);
 
 	while(str1[i] != '\0' && pointeur == NULL)
 	{
@@ -27,7 +29,7 @@ nombreCaractere = strlen(str2)-1;
 			i++;
 		}
 		indicateurPointeur = i;
-		/*printf("\nl'indicateur Pointeur est a : %d ", indicateurPointeur);*/
+		printf("\nl'indicateur Pointeur est a : %d ", indicateurPointeur);
 
 		if(str1[i] == str2[0])
 		{
@@ -35,7 +37,7 @@ nombreCaractere = strlen(str2)-1;
 			while(str1[i] == str2[j] && str2[j] != '\0')
 			{
 
-				/*printf("\nstr1[%d] -- str2[%d]", i, j);*/
+				printf("\nstr1[%d] -- str2[%d]", i, j);
 				i++;
 				j++;
 				count++;
@@ -50,7 +52,7 @@ nombreCaractere = strlen(str2)-1;
 		i = indicateurPointeur;
 		count = 0;
 		i++;
-		/*printf("\nsortant de la seconde boucle while indicateurPointeur a initialiser i à : %d\n", i);*/
+		printf("\nsortant de la seconde boucle while indicateurPointeur a initialiser i à : %d\n", i);
 	}
 return pointeur;
 }
